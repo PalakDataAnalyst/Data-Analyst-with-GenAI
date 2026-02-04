@@ -77,4 +77,4 @@ WHERE roll_number = 102;
 DELETE FROM students;
 ---
 📌 Connect with me on [LinkedIn](https://www.linkedin.com/in/palak-srivastava-12bb19234)  
-✉️ Email: palaksrivastava05@gmail.com
+✉️ Email: palaksrivastava630@gmail.com
