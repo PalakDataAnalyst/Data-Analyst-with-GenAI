@@ -16,6 +16,7 @@ To build a strong foundation in SQL, Python, and Data Visualization, using GenAI
 | Day | Topic | Key Achievement | Code |
 | :--- | :--- | :--- | :--- |
 | Day 01 | SQL Basics | CRUD operations & Basic Filtering | [Day01.sql](./SQL/Day01.sql) |
+| Day 02 | SQL Aggregates & Table Alteration | Practiced multi-row inserts and ALTER TABLE | [Day02.sql](./SQL/Day02.sql) |
 -- =========================================================
 -- Day 01: SQL Basics - CRUD Operations & Basic Filtering
 -- Course: Data Analyst with GenAI (Incapp Institute)
