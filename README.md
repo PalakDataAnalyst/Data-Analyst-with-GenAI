@@ -19,6 +19,7 @@ To build a strong foundation in SQL, Python, and Data Visualization, using GenAI
 | Day 02 | SQL Aggregates & Table Alteration | Practiced multi-row inserts and ALTER TABLE | [Day02.sql](./SQL/Day02.sql) |
 | Day 03 | SQL Constraints & Derived Columns | Applied PRIMARY KEY, NOT NULL, UNIQUE, CHECK; added total/average marks and conditional result | [.Day03_SQL_Constraints.sql](./SQL/Day03_SQL_Constraints.sql) |
 | Day 04 | Employee Database Filtering & Sorting | Created `company` DB, inserted 45+ employee records; practiced DISTINCT, WHERE, LIKE, ORDER BY, LIMIT/OFFSET, BETWEEN | [Day04_SQL_EmployeeDatabase.sql](./SQL/Day04_SQL_EmployeeDatabase.sql) |
+| Day 05 | Aggregates & Nested Queries | Applied COUNT, SUM, AVG, MIN, MAX; built nested queries comparing salaries to overall average | [Day05_SQL_AggregatesNested.sql](./SQL/Day05_SQL_AggregatesNested.sql) |
 
 -- =========================================================
 ---
