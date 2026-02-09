@@ -1,0 +1,47 @@
+DAY 6 - GROUP BY QUERY PART - 1 
+
+use company;
+
+show tables;
+
+select id, name, city from employees;
+
+select * from employees;
+
+select distinct age from employees;
+
+select min(age) as 'Minimum Age' from employees;
+
+select max(age) as 'Maximum Age' from employees;
+
+select min(age) as 'Minimum Age', max(age) as 'Maximum Age' from employees;
+
+select count(id) as 'Number of Employees' from employees;
+
+-- Conditional Queries
+SELECT 
+    id AS 'Employee Id',
+    name,
+    age,
+    CASE
+        WHEN age <= 26 THEN 'Fresher'
+        ELSE 'Experienced'
+    END AS 'Employee Type'
+FROM
+    employees;
+    
+-- Conditional and subquery
+SELECT 
+    id AS 'Employee Id',
+    name AS 'Employee Name',
+    age AS 'Employee Age',
+    CASE
+        WHEN
+            age BETWEEN (SELECT MIN(age) FROM employees) AND 26
+        THEN
+            'Fresher'
+        ELSE 'Experienced'
+    END AS 'Employee Type'
+FROM
+    employees;
+    
