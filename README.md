@@ -17,8 +17,6 @@ To build a strong foundation in SQL, Python, and Data Visualization, using GenAI
 | :--- | :--- | :--- | :--- |
 ## 📝 Learning Log
 
-## 📝 Learning Log
-
 | Day    | Topic                                | Key Achievement                                                                 |
 |--------|---------------------------------------|---------------------------------------------------------------------------------|
 | Day 01 | SQL Basics                            | CRUD operations & Basic Filtering                                                |
