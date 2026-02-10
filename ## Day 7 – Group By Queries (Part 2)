@@ -1,0 +1,126 @@
+DAY 7 - Group by Queries Part - 2
+
+use company;
+
+show tables;
+
+select id, name, city from employees;
+
+select * from employees;
+
+select distinct age from employees;
+
+select min(age) as 'Minimum Age' from employees;
+
+select max(age) as 'Maximum Age' from employees;
+
+select min(age) as 'Minimum Age', max(age) as 'Maximum Age' from employees;
+
+select count(id) as 'Number of Employees' from employees;
+
+-- Conditional Queries
+SELECT 
+    id AS 'Employee Id',
+    name,
+    age,
+    CASE
+        WHEN age <= 26 THEN 'Fresher'
+        ELSE 'Experienced'
+    END AS 'Employee Type'
+FROM
+    employees;
+    
+-- Conditional and subquery
+SELECT 
+    id AS 'Employee Id',
+    name AS 'Employee Name',
+    age AS 'Employee Age',
+    CASE
+        WHEN
+            age BETWEEN (SELECT MIN(age) FROM employees) AND 26
+        THEN
+            'Fresher'
+        ELSE 'Experienced'
+    END AS 'Employee Type'
+FROM
+    employees;
+    
+-- Conditional and aggreation query
+SELECT 
+    COUNT(CASE
+        WHEN post = 'Software Engineer' THEN id
+    END) AS 'Number of Software Engineers'
+FROM
+    employees;
+    
+SELECT 
+    COUNT(id) AS 'Number of Software Engineers'
+FROM
+    employees
+WHERE
+    post = 'Software Engineer';
+    
+-- Groupby queries
+SELECT 
+    post AS 'Employee Post', COUNT(id) AS 'Number of Employees'
+FROM
+    employees
+GROUP BY post;
+
+SELECT 
+    post AS 'Employee Post', COUNT(id) AS 'Number of Employees'
+FROM
+    employees
+GROUP BY post
+ORDER BY COUNT(id) DESC;
+
+SELECT 
+    city AS 'Employee City', round(AVG(salary), 2) AS 'Average Salary'
+FROM
+    employees
+GROUP BY city;
+
+SELECT 
+    post AS 'Employee Post', COUNT(id) AS 'Number of Employees'
+FROM
+    employees
+WHERE
+    salary >= 50000
+GROUP BY post;
+
+SELECT 
+    post AS 'Employee Post', COUNT(id) AS 'Number of Employees'
+FROM
+    employees
+GROUP BY post
+HAVING COUNT(id) >= 2
+ORDER BY COUNT(id) DESC;
+
+SELECT 
+    department AS 'Employee Department',
+    COUNT(id) AS 'Number of Employees'
+FROM
+    employees
+WHERE
+    salary >= 50000
+GROUP BY department
+HAVING COUNT(id) > 1;
+
+SELECT 
+    Department, Post, COUNT(id) AS 'Number of Employees'
+FROM
+    employees
+GROUP BY Department , Post
+ORDER BY COUNT(id) DESC;
+
+SELECT 
+    Department, 
+    Post, 
+    round(avg(salary), 2) AS 'Average Salary'
+FROM
+    employees
+GROUP BY Department , Post
+ORDER BY avg(salary) DESC;
+
+	
+    
