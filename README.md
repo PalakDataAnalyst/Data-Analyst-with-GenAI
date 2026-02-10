@@ -13,7 +13,7 @@ To build a strong foundation in SQL, Python, and Data Visualization, using GenAI
 * **Training Provider:** Incapp
 
 ## 📈 Learning Log
-| Day | Topic | Key Achievement | Code |
+| Day | Topic | Key Achievement |
 | :--- | :--- | :--- | :--- |
 ## 📝 Learning Log
 
