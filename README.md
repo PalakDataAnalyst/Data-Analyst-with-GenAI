@@ -25,6 +25,7 @@ To build a strong foundation in SQL, Python, and Data Visualization, using GenAI
 | Day 04 | Employee Database Filtering & Sorting | Created company DB, inserted 45+ employee records; practiced DISTINCT, WHERE, LIKE, ORDER BY, LIMIT/OFFSET, BETWEEN | [Day04_SQL_EmployeeDatabase.sql](SQL/Day04_SQL_EmployeeDatabase.sql) |
 | Day 05 | Aggregates & Nested Queries           | Applied COUNT, SUM, AVG, MIN, MAX; built nested queries comparing salaries to overall average | [Day05_SQL_AggregatesNested.sql](SQL/Day05_SQL_AggregatesNested.sql) |
 | Day 06 | Conditional Queries & Subqueries      | Used CASE for classification (Fresher vs Experienced); combined CASE with subqueries | [Day06_SQL_ConditionalSubqueries.sql](SQL/Day06_SQL_ConditionalSubqueries.sql) |
+| Day 07 | Group By Queries (Part 2)             | Practiced GROUP BY with aggregates; explored DISTINCT, MIN, MAX, and age‑based queries | [Day07_SQL_GroupByPart2.sql](SQL/Day07_SQL_GroupByPart2.sql) |
 
 -- =========================================================
 ---
