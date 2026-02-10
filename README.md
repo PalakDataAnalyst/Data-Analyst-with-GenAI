@@ -15,7 +15,11 @@ To build a strong foundation in SQL, Python, and Data Visualization, using GenAI
 ## 📈 Learning Log
 | Day | Topic | Key Achievement | Code |
 | :--- | :--- | :--- | :--- |
-| Day 01 | SQL Basics                  | CRUD operations & Basic Filtering                                                | [Day01.sql](SQL/Day01.sql)                                           |
+## 📝 Learning Log
+
+| Day    | Topic                                | Key Achievement                                                                 | Code                                                                 |
+|--------|---------------------------------------|---------------------------------------------------------------------------------|----------------------------------------------------------------------|
+| Day 01 | SQL Basics                            | CRUD operations & Basic Filtering                                                | [Day01.sql](SQL/Day01.sql)                                           |
 | Day 02 | SQL Aggregates & Table Alteration     | Practiced multi-row inserts and ALTER TABLE                                     | [Day02.sql](SQL/Day02.sql)                                           |
 | Day 03 | SQL Constraints & Derived Columns     | Applied PRIMARY KEY, NOT NULL, UNIQUE, CHECK; added total/average marks and conditional result | [Day03_SQL_Constraints.sql](SQL/Day03_SQL_Constraints.sql) |
 | Day 04 | Employee Database Filtering & Sorting | Created company DB, inserted 45+ employee records; practiced DISTINCT, WHERE, LIKE, ORDER BY, LIMIT/OFFSET, BETWEEN | [Day04_SQL_EmployeeDatabase.sql](SQL/Day04_SQL_EmployeeDatabase.sql) |
