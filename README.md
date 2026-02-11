@@ -26,6 +26,10 @@ To build a strong foundation in SQL, Python, and Data Visualization, using GenAI
 | Day 05 | Aggregates & Nested Queries           | Applied COUNT, SUM, AVG, MIN, MAX; built nested queries comparing salaries to overall average |
 | Day 06 | Conditional Queries & Subqueries      | Used CASE for classification (Fresher vs Experienced); combined CASE with subqueries |
 | Day 07 | Group By Queries (Part 2)             | Practiced GROUP BY with aggregates; explored DISTINCT, MIN, MAX, and age‑based queries |
+ Day 08  | Window Functions & Advanced Analytics | Practiced SUM() with OVER(), running totals, partitioned totals by department/city, and calculated salary contribution percentages |
+
+---
+
 -- =========================================================
 ---
 📌 Connect with me on [LinkedIn](https://www.linkedin.com/in/palak-srivastava-12bb19234)  
