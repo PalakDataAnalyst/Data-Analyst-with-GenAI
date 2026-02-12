@@ -1,0 +1,163 @@
+DAY 9 - WINDOWS FUNCTION PART- 2 
+
+use company;
+
+select * from employees;
+
+-- aggregation function with window function
+select
+	id,
+	name,
+	salary,
+	sum(salary) over() as 'Total Salary'
+from
+	employees;
+
+select
+	id,
+	name,
+	salary,
+	sum(salary) over() as 'Total Salary',
+    round(salary / (sum(salary) over()) * 100, 2) as 'Percent of Total Salary'
+from
+	employees;
+        
+select
+	*,
+    sum(salary) over(order by salary) as 'Running Total Salary'
+from
+	employees;
+    
+select
+	*,
+    sum(salary) over(order by id) as 'Running Total Salary'
+from
+	employees;
+    
+select
+	*,
+    sum(salary) over(partition by department) as 'Total Salary'
+from
+	employees;
+
+select
+	*,
+    sum(salary) over(partition by city) as 'Total Salary'
+from
+	employees;
+    
+select
+	*,
+    sum(salary) over(partition by department order by id)
+    as 'Running Total Salary Department-wise'
+from
+	employees;
+    
+select
+	id as 'Employee Id',
+    Name,
+    Salary,
+    avg(salary) over() as 'Overall Average Salary'
+from
+	employees;
+    
+select
+	id as 'Employee Id',
+    Name,
+    Salary,
+    avg(salary) over() as 'Overall Average Salary',
+    salary - avg(salary) over() as 'Difference from Average Salary'
+from
+	employees;
+    
+select
+	*,
+    round(avg(salary) over(order by id), 2) as 'Moving Average Salary'
+from
+	employees;
+    
+select
+	*,
+    round(avg(salary) over(partition by department), 2)
+    as 'Overall Average Salary by Department'
+from
+	employees;
+    
+select
+	*,
+    round(avg(salary) over(partition by department order by id), 2)
+    as 'Moving Average Salary by Department'
+from
+	employees;
+    
+select * from employees;
+
+select avg(salary) over(partition by department) from employees;
+    
+-- alter table employees add column department_wise_average_salary float;
+
+-- update employees
+-- set department_wise_average_salary = (
+-- 	select avg(salary) over(partition by department)
+-- );
+
+alter table employees drop column department_wise_average_salary;
+
+-- analytic functions with window function
+select
+	*,
+	rank() over(order by salary desc) as 'Rank by Salary'
+from
+	employees;
+
+select
+	*,
+	dense_rank() over(order by salary desc) as 'Rank by Salary'
+from
+	employees;
+    
+select
+	*,
+	dense_rank() over(partition by department order by salary desc)
+    as 'Rank by Salary'
+from
+	employees;
+    
+select
+	*,
+    row_number() over() as 'Row Number'
+from employees;
+
+select
+	*,
+    row_number() over(order by salary desc) as 'Row Number'
+from employees;
+
+select
+	*,
+    row_number() over(partition by department order by salary desc)
+    as 'Row Number'
+from employees;
+
+select
+    row_number() over(partition by department order by salary desc)
+    as 'Serial Number',
+    id, 
+    name,
+    salary,
+    department
+from employees;
+
+select
+	*
+from
+	(select
+		id,
+		name,
+		salary,
+		department,
+		dense_rank() over(partition by department order by salary desc)
+		as RankBySalary
+	from
+		employees) as EmployeeDataByRank
+where RankBySalary <= 3;
