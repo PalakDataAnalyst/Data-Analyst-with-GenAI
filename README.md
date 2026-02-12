@@ -27,6 +27,7 @@ To build a strong foundation in SQL, Python, and Data Visualization, using GenAI
 | Day 06 | Conditional Queries & Subqueries      | Used CASE for classification (Fresher vs Experienced); combined CASE with subqueries |
 | Day 07 | Group By Queries (Part 2)             | Practiced GROUP BY with aggregates; explored DISTINCT, MIN, MAX, and age‑based queries |
  Day 08  | Window Functions & Advanced Analytics | Practiced SUM() with OVER(), running totals, partitioned totals by department/city, and calculated salary contribution percentages |
+| Day 09 | Advanced Window Functions & Ranking  | Practiced SUM() and AVG() with window functions for totals, percentages, and moving averages; explored partitioning by department/city; applied RANK(), DENSE_RANK(), and ROW_NUMBER() for salary ordering; extracted top-N employees per department; strengthened understanding of analytic vs aggregate functions |
 
 ---
 
