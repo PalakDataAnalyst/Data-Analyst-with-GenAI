@@ -1,0 +1,67 @@
+DAY 10 - SQL JOINS PART 1 
+
+create database retail_shop;
+
+use retail_shop;
+
+create table customers(
+	id int primary key auto_increment,
+    name varchar(30) not null,
+    city varchar(30) not null
+)auto_increment = 101;
+
+create table orders(
+	id int auto_increment primary key,
+    customer_id int not null,
+    order_date date not null,
+    amount float not null
+)auto_increment = 1001;
+
+select * from customers;
+
+select * from orders;
+
+insert into
+customers(name, city)
+values
+('Vijay Verma', "Greater Noida"),
+("Mahima Gupta", 'Noida'),
+('Pankaj Mishra', 'Greater Noida');
+
+insert into
+orders(customer_id, order_date, amount)
+values
+(101, '2026-02-01', 12500),
+(102, '2026-02-01', 11600),
+(101, '2026-02-02', 13550),
+(102, '2026-02-02', 11100),
+(104, '2026-02-03', 13250),
+(105, '2026-02-03', 12750);
+
+-- inner join queries
+SELECT 
+    *
+FROM
+    customers
+        INNER JOIN
+    orders ON customers.id = orders.customer_id;
+
+SELECT 
+    customers.name AS 'Customer Name',
+    customers.city AS 'Customer City',
+    orders.order_date AS 'Order Date',
+    orders.amount AS 'Order Amount'
+FROM
+    orders
+        INNER JOIN
+    customers ON customers.id = orders.customer_id;
+    
+-- Using join and group by
+SELECT 
+    customers.name AS 'Customer Name',
+    SUM(orders.amount) AS 'Total Ravenue'
+FROM
+    customers
+        INNER JOIN
+    orders ON customers.id = orders.customer_id
+GROUP BY customers.name;
