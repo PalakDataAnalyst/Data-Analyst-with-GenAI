@@ -28,6 +28,8 @@ To build a strong foundation in SQL, Python, and Data Visualization, using GenAI
 | Day 07 | Group By Queries (Part 2)             | Practiced GROUP BY with aggregates; explored DISTINCT, MIN, MAX, and age‑based queries |
  Day 08  | Window Functions & Advanced Analytics | Practiced SUM() with OVER(), running totals, partitioned totals by department/city, and calculated salary contribution percentages |
 | Day 09 | Advanced Window Functions & Ranking  | Practiced SUM() and AVG() with window functions for totals, percentages, and moving averages; explored partitioning by department/city; applied RANK(), DENSE_RANK(), and ROW_NUMBER() for salary ordering; extracted top-N employees per department; strengthened understanding of analytic vs aggregate functions |
+| Day 10 | Joins & Aggregation in Retail DB | Created `retail_shop` database with `customers` and `orders` tables; practiced INNER JOIN for customer–order mapping; applied column aliasing for clarity; used GROUP BY with SUM to calculate total revenue per customer; learned importance of foreign keys and referential integrity when inserting data. |
+
 
 ---
 
