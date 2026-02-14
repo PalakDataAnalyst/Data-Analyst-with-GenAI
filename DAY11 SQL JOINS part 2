@@ -1,0 +1,172 @@
+DAY 11 - SQL JOINS PART 2
+
+create database retail_shop;
+
+use retail_shop;
+
+create table customers(
+	id int primary key auto_increment,
+    name varchar(30) not null,
+    city varchar(30) not null
+)auto_increment = 101;
+
+create table orders(
+	id int auto_increment primary key,
+    customer_id int not null,
+    order_date date not null,
+    amount float not null
+)auto_increment = 1001;
+
+select * from customers;
+
+select * from orders;
+
+insert into
+customers(name, city)
+values
+('Vijay Verma', "Greater Noida"),
+("Mahima Gupta", 'Noida'),
+('Pankaj Mishra', 'Greater Noida');
+
+insert into
+orders(customer_id, order_date, amount)
+values
+(101, '2026-02-01', 12500),
+(102, '2026-02-01', 11600),
+(101, '2026-02-02', 13550),
+(102, '2026-02-02', 11100),
+(104, '2026-02-03', 13250),
+(105, '2026-02-03', 12750);
+
+-- inner join queries
+SELECT 
+    *
+FROM
+    customers
+        INNER JOIN
+    orders ON customers.id = orders.customer_id;
+
+SELECT 
+    customers.name AS 'Customer Name',
+    customers.city AS 'Customer City',
+    orders.order_date AS 'Order Date',
+    orders.amount AS 'Order Amount'
+FROM
+    orders
+        INNER JOIN
+    customers ON customers.id = orders.customer_id;
+    
+-- Using join and group by
+SELECT 
+    customers.name AS 'Customer Name',
+    SUM(orders.amount) AS 'Total Ravenue'
+FROM
+    customers
+        INNER JOIN
+    orders ON customers.id = orders.customer_id
+GROUP BY customers.name;
+
+SELECT 
+    customers.city AS 'Customer City',
+    COUNT(orders.id) AS 'Number of Orders'
+FROM
+    customers
+        INNER JOIN
+    orders ON customers.id = orders.customer_id
+GROUP BY customers.city;
+
+-- Left Join
+SELECT 
+    *
+FROM
+    customers
+        LEFT JOIN
+    orders ON customers.id = orders.customer_id;
+    
+SELECT 
+    *
+FROM
+    orders
+        LEFT JOIN
+    customers ON customers.id = orders.customer_id;
+    
+SELECT 
+    customers.id as 'Customer Id',
+    customers.name as 'Customer Name',
+    customers.city as 'Customer City',
+    orders.order_date as 'Order Date',
+    orders.amount as 'Order Amount'
+FROM
+    customers
+        LEFT JOIN
+    orders ON customers.id = orders.customer_id;
+    
+-- Right Join
+SELECT 
+    *
+FROM
+    customers
+        RIGHT JOIN
+    orders ON customers.id = orders.customer_id;
+    
+SELECT 
+    *
+FROM
+    orders
+        RIGHT JOIN
+    customers ON customers.id = orders.customer_id;
+    
+SELECT 
+    customers.id as 'Customer Id',
+    customers.name as 'Customer Name',
+    customers.city as 'Customer City',
+    orders.id as 'Order Id',
+    orders.order_date as 'Order Date',
+    orders.amount as 'Order Amount'
+FROM
+    customers
+        RIGHT JOIN
+    orders ON customers.id = orders.customer_id;
+    
+-- Full Join
+SELECT 
+    *
+FROM
+    customers
+        LEFT JOIN
+    orders ON customers.id = orders.customer_id 
+UNION SELECT 
+    *
+FROM
+    customers
+        RIGHT JOIN
+    orders ON customers.id = orders.customer_id;
+    
+create table employees(
+	employee_id int primary key auto_increment,
+    name varchar(30) not null
+);
+
+insert into
+employees(name)
+values
+('Vijay Verma'),
+('Mahima Gupta'),
+('Pankaj Mishra'),
+('Manoj Pandey');
+
+select * from employees;
+
+alter table employees add column manager_id int;
+    
+update employees set manager_id = 1 where employee_id = 2;
+update employees set manager_id = 1 where employee_id = 3;
+update employees set manager_id = 2 where employee_id = 4;
+
+-- Self Join
+SELECT 
+    e.name AS 'Employee Name', m.name AS 'Manager Name'
+FROM
+    employees AS e
+        INNER JOIN
+    employees AS m ON m.employee_id = e.manager_id;
