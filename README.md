@@ -30,6 +30,8 @@ To build a strong foundation in SQL, Python, and Data Visualization, using GenAI
 | Day 09 | Advanced Window Functions & Ranking  | Practiced SUM() and AVG() with window functions for totals, percentages, and moving averages; explored partitioning by department/city; applied RANK(), DENSE_RANK(), and ROW_NUMBER() for salary ordering; extracted top-N employees per department; strengthened understanding of analytic vs aggregate functions |
 | Day 10 | Joins & Aggregation in Retail DB | Created `retail_shop` database with `customers` and `orders` tables; practiced INNER JOIN for customer–order mapping; applied column aliasing for clarity; used GROUP BY with SUM to calculate total revenue per customer; learned importance of foreign keys and referential integrity when inserting data. |
 |Day 11| Advanced Joins, Set Operations & Views | Practiced self-joins for hierarchical data (employees & managers), explored cross joins for combinations, applied UNION/INTERSECT/EXCEPT for set operations, and created Views to simplify complex queries and improve reusability/security. |
+| Day 12| Joins, Self Joins & Cross Joins | Built retail_shop database with customers and orders; practiced multiple INNER JOIN syntaxes with aliasing; applied GROUP BY with SUM() and COUNT() for revenue and order counts; explored LEFT JOIN and RIGHT JOIN differences; simulate|
+
 
 ---
 
