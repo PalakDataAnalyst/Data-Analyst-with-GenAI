@@ -1,0 +1,48 @@
+DAY 13 - Foreign Key - One to One relationship
+
+create database website;
+
+use website;
+
+create table users(
+	id int auto_increment,
+    name varchar(30) not null,
+    city varchar(30) not null,
+    primary key(id)
+)auto_increment = 101;
+
+insert into
+users(name, city)
+values
+('Vijay Verma', "Greater Noida"),
+("Mahima Gupta", 'Noida');
+
+select * from users;
+
+create table contacts(
+	id int auto_increment,
+    user_id int not null,
+    phone_number varchar(15) not null unique,
+    email_id varchar(50) not null unique,
+    primary key(id),
+    foreign key(user_id) references users(id)
+);
+
+insert into
+contacts(user_id, phone_number, email_id)
+values
+(101, '+91-9811234567', 'vijay@gmail.com'),
+(102, '+91-8812214554', 'mahima@gmail.com');
+
+select * from contacts;
+
+
+SELECT 
+    users.name AS 'User Name',
+    users.city AS 'City',
+    contacts.phone_number AS 'Phone Number',
+    contacts.email_id AS 'Email Id'
+FROM
+    users
+        JOIN
+    contacts ON users.id = contacts.user_id;
