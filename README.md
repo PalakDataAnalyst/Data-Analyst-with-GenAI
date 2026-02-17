@@ -32,6 +32,8 @@ To build a strong foundation in SQL, Python, and Data Visualization, using GenAI
 |Day 11| Advanced Joins, Set Operations & Views | Practiced self-joins for hierarchical data (employees & managers), explored cross joins for combinations, applied UNION/INTERSECT/EXCEPT for set operations, and created Views to simplify complex queries and improve reusability/security. |
 | Day 12| Joins, Self Joins & Cross Joins | Built retail_shop database with customers and orders; practiced multiple INNER JOIN syntaxes with aliasing; applied GROUP BY with SUM() and COUNT() for revenue and order counts; explored LEFT JOIN and RIGHT JOIN differences; simulate|
 |Day 13 | Relational Integrity & Joins in Website DB | Created website database with users and contacts tables; applied AUTO_INCREMENT starting at 101; enforced FOREIGN KEY for referential integrity; inserted user and contact records with UNIQUE constraints; practiced INNER JOIN to combine user details with contact info for a consolidated view.|
+| DAY 14 | One-to-Many Foreign Key | Implemented parent-child schema (departments → employees); enforced referential integrity using FOREIGN KEY with ON DELETE/ON UPDATE rules; tested CASCADE, RESTRICT, SET NULL; practiced JOINs, aggregate queries per department, and detection of orphaned rows; ensured InnoDB engine, added index on FK, used DECIMAL for salary, and exercised transactions with ROLLBACK to preserve consistency.|
+
 
 ---
 
