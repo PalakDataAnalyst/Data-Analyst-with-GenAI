@@ -1,0 +1,83 @@
+DAY 15 -FOREIGN RELATION -  MANY TO MANY 
+
+create database institute;
+
+use institute;
+
+create table students(
+	student_id int primary key auto_increment,
+    name varchar(30) not null,
+    city varchar(30) not null
+)auto_increment = 101;
+
+select * from students;
+
+insert into students(name, city)
+values
+('Vijay Verma', "Greater Noida"),
+("Mahima Gupta", 'Noida');
+
+create table courses(
+	course_id int auto_increment primary key,
+    name varchar(30) not null,
+    fee float not null
+)auto_increment = 1001;
+
+select * from courses;
+
+insert into	
+courses(name, fee)
+value
+('Digital Marketing', 12600),
+('Spoken English', 11500);
+
+create table students_courses(
+	student_id int not null,
+    course_id int not null,
+    foreign key(student_id) references students(student_id),
+    foreign key(course_id) references courses(course_id)
+);
+
+select * from students_courses;
+
+insert into
+students_courses(student_id, course_id)
+values
+(101, 1001),
+(101, 1002),
+(102, 1001),
+(102, 1002);
+
+SELECT 
+    *
+FROM
+    students
+        JOIN
+    students_courses ON students.student_id = students_courses.student_id
+        JOIN
+    courses ON students_courses.course_id = courses.course_id;
+    
+SELECT 
+    students.name as 'Student Name',
+    students.city as 'Student City',
+    courses.name as 'Course Name',
+    courses.fee as 'Course Fee'
+FROM
+    students
+        JOIN
+    students_courses ON students.student_id = students_courses.student_id
+        JOIN
+    courses ON students_courses.course_id = courses.course_id;
+    
+-- Group by and join
+SELECT 
+    students.name AS Student_Name,
+    SUM(courses.fee) AS 'Total Fee'
+FROM
+    students
+        JOIN
+    students_courses ON students.student_id = students_courses.student_id
+        JOIN
+    courses ON students_courses.course_id = courses.course_id
+GROUP BY Student_Name;
+
