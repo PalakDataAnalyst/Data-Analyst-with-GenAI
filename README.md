@@ -34,7 +34,7 @@ To build a strong foundation in SQL, Python, and Data Visualization, using GenAI
 |Day 13 | Relational Integrity & Joins in Website DB | Created website database with users and contacts tables; applied AUTO_INCREMENT starting at 101; enforced FOREIGN KEY for referential integrity; inserted user and contact records with UNIQUE constraints; practiced INNER JOIN to combine user details with contact info for a consolidated view.|
 | DAY 14 | One-to-Many Foreign Key | Implemented parent-child schema (departments → employees); enforced referential integrity using FOREIGN KEY with ON DELETE/ON UPDATE rules; tested CASCADE, RESTRICT, SET NULL; practiced JOINs, aggregate queries per department, and detection of orphaned rows; ensured InnoDB engine, added index on FK, used DECIMAL for salary, and exercised transactions with ROLLBACK to preserve consistency.|
 |DAY15 | Many-to-Many Foreign Key | Designed students–courses schema with junction table students_courses; enforced referential integrity with foreign keys; inserted enrollment records linking multiple students to multiple courses; practiced JOIN queries to display student–course mappings; applied GROUP BY with SUM to calculate total fees per student|
-
+|DAY15 | Common Table Expressions | Designed Queries using CTEs and modified the queries for being more efficient and effective |
 
 ---
 
