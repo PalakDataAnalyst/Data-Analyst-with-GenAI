@@ -1,0 +1,44 @@
+DAY 16 - COMMON TABLE EXPRESSIONS
+
+use company;
+
+select * from employees;
+
+-- Using CTE
+with all_employees_data as(
+	select * from employees
+)
+select * from all_employees_data;
+
+-- Filtering Top 3 Employees by Department without Using CTE
+select
+	*
+from
+	(select
+		*,
+		dense_rank() over(partition by department order by salary desc) 
+		as Rank_By_Salary
+	from
+		employees) as Employees_Data_By_Rank
+where Rank_By_Salary <= 3;
+
+select
+	*
+from
+	(select
+		*,
+		dense_rank() over(partition by department order by salary desc) 
+		as `Rank By Salary`
+	from
+		employees) as `Employees Data By Rank`
+where `Rank By Salary` <= 3;
+
+-- Filtering Top 3 Employees by Department Using CTE
+with `Employees Data By Rank` as (
+	select
+		*,
+		dense_rank() over(partition by department order by salary desc) 
+		as `Rank By Salary`
+	from
+		employees
+)select * from `Employees Data By Rank` where `Rank By Salary` <= 3;
