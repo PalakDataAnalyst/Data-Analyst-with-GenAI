@@ -36,6 +36,7 @@ To build a strong foundation in SQL, Python, and Data Visualization, using GenAI
 |DAY15 | Many-to-Many Foreign Key | Designed students–courses schema with junction table students_courses; enforced referential integrity with foreign keys; inserted enrollment records linking multiple students to multiple courses; practiced JOIN queries to display student–course mappings; applied GROUP BY with SUM to calculate total fees per student|
 | DAY16 | Common Table Expressions | Designed Queries using CTEs and modified the queries for being more efficient and effective |
 | DAY17 | Date and time part 1 | Used different date and time functions in the examples like current_date, curdate, curtime, month, now, year, etc |
+| DAY18 | Date and time part 2 | Explored left of date and time functions and applied in different examples to decipher more|
 ---
 
 -- =========================================================
