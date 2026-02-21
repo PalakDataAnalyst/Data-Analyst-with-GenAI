@@ -1,0 +1,35 @@
+DAY 17 - DATE AND TIME part 1
+
+select current_date() 'Current Date';
+
+select curdate() 'Current Date';
+
+select current_time() as 'Current Time';
+
+select curtime() as 'Current Time';
+
+select current_timestamp() 'Current Date and Time';
+
+select now() as 'Current Date and Time';
+
+select day(now()) as 'Current Day Number';
+
+select dayname(now()) as 'Current Day Name';
+
+select month(now()) as 'Current Month Number';
+
+select monthname(now()) as 'Current Month Name';
+
+select year(now()) as 'Current Year';
+
+select minute(now()) as 'Current Minute';
+
+select hour(now()) as 'Current Hour';
+
+select second(now()) as 'Current Second';
+
+select datediff(now(), '2026-01-01') as 'Number of Days';
+
+select timediff('04:15:31', '03:52:16') as 'Time taken in Delivery';
+
+select minute(timediff('04:15:31', '03:52:16')) as 'Delivery time taken in minutes';
