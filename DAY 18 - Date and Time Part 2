@@ -1,0 +1,81 @@
+DAY 18 - Date and Time Part 2
+
+select current_date() 'Current Date';
+
+select curdate() 'Current Date';
+
+select current_time() as 'Current Time';
+
+select curtime() as 'Current Time';
+
+select current_timestamp() 'Current Date and Time';
+
+select now() as 'Current Date and Time';
+
+select day(now()) as 'Current Day Number';
+
+select dayname(now()) as 'Current Day Name';
+
+select month(now()) as 'Current Month Number';
+
+select monthname(now()) as 'Current Month Name';
+
+select year(now()) as 'Current Year';
+
+select minute(now()) as 'Current Minute';
+
+select hour(now()) as 'Current Hour';
+
+select second(now()) as 'Current Second';
+
+select datediff(now(), '2026-01-01') as 'Number of Days';
+
+select timediff('04:15:31', '03:52:16') as 'Time taken in Delivery';
+
+select timediff(time(now()), '03:52:16') as 'Time taken in Delivery';
+
+select minute(timediff('04:15:31', '03:52:16')) as 'Delivery time taken in minutes';
+
+select date_add(now(), interval 15 day) as 'Date after 15 day from today';
+
+select date_add(now(), interval 2 month) as 'Date after 2 month from today';
+
+select date_add(now(), interval 1 year) as 'Date after 2 month from today';
+
+select adddate(now(), interval 1 year) as 'Date after 2 month from today';
+
+select date_sub(now(), interval 20 day) as 'Date before 20 days from today';
+
+select date_sub(date(now()), interval 20 day) as 'Date before 20 days from today';
+
+select subdate(date(now()), interval 20 day) as 'Date before 20 days from today';
+
+select yearweek(now()) as 'Year and Week Number'; 
+
+select weekofyear(now()) as 'Week Number'; 
+
+select weekofyear(now()) - 1 as 'Week Number'; 
+
+select str_to_date('10-02-2026', '%d-%m-%Y') as 'Converted Date';
+
+select str_to_date('10-2-2026', '%d-%m-%Y') as 'Converted Date';
+
+select str_to_date('10/2/26', '%d/%m/%y') as 'Converted Date';
+
+select str_to_date('21-January-2026', '%d-%M-%Y') as 'Converted Date';
+
+select str_to_date('11th-January-2026', '%D-%M-%Y') as 'Converted Date';
+
+select date_format(current_date(), '%d-%m-%Y') as 'Formatted Date';
+
+select date_format(current_date(), '%D-%m-%y') as 'Formatted Date';
+
+select date_format(current_date(), '%D-%M-%Y') as 'Formatted Date';
+
+select date_format(now(), '%D-%M-%Y %h:%i') as 'Formatted Date';
+
+select date_format(now(), '%D-%M-%Y %h:%i %p') as 'Formatted Date';
+
+select date_format(now(), '%D-%M-%Y %h:%i:%s %p') as 'Formatted Date';
+
+select date_format(now(), '%D-%M-%Y %H:%i:%s') as 'Formatted Date';
